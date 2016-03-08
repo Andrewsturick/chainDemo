@@ -17,6 +17,7 @@
 
 .dropdown-menu{
   position: inherit;
+
 }
 .open > .dropdown-menu {
     display: block;

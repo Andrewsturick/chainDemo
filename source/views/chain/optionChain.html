@@ -20,7 +20,7 @@ loading chains!!
           <div class="dropdown">
           <div class="dropdown-toggle" type="button" id="header.title" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
           {{header.title}}
-          <!-- <br> -->
+          <br>
           <span class="caret"></span>
         </div>
         <ul class="dropdown-menu" aria-labelledby="header.title">
@@ -61,13 +61,13 @@ loading chains!!
 </th>
 <tbody>
   <tr ng-repeat="(i,strike) in currentlyDisplayingChain | orderBy: 'numberStrike'">
-    <td ng-repeat="(i, header) in dataShown track by $index">{{ Math.round(strike.call[header.key]*100)/100  || strike.call[header.key] || "N/A"}}</td>
+    <td ng-repeat="(i, header) in dataShown track by $index">{{strike.call[header.key]| number:2 || "N/A"}}</td>
     <td>{{Math.round(strike.call['bid']*100)/100 || strike.call['bid']}}</td>
     <td>{{Math.round(strike.call['ask']*100)/100 || strike.call['ask']}}</td>
     <td>{{strike.put['strike'].replace("@",".")}}</td>
     <td>{{Math.round(strike.put['bid']*100)/100 || strike.put['bid']}}</td>
     <td>{{Math.round(strike.put['ask']*100)/100 || strike.put['ask']}}</td>
-    <td ng-repeat="(i, header) in dataShown | reverse track by $index">{{ Math.round(strike.put[header.key]*100)/100 || strike.call[header.key]  || "N/A"}}</td>
+    <td ng-repeat="(i, header) in dataShown | reverse track by $index">{{strike.put[header.key]| number:2  || "N/A"}}</td>
   </tr>
 </tbody>
 </table>
