@@ -1,0 +1,23 @@
+.loading, .choose-expiration, expiration-btn-holder{
+  text-align: center;
+  font-size: 3em;
+}
+
+.expiration-btn-holder{
+  margin:auto;
+}
+
+.buttons{
+  text-align: center;
+}
+
+.dropdown{
+  position: inherit;
+}
+
+.dropdown-menu{
+  position: inherit;
+}
+.open > .dropdown-menu {
+    display: block;
+}

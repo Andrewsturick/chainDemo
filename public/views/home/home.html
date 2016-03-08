@@ -1,0 +1,21 @@
+<div class="container title-container">
+  <h1 class="chain-title">Option Chain Demo</h1>
+  <h3>Search for a stock or symbol!</h3>
+  <br>
+  <angucomplete-alt id="ex1"
+  placeholder="Search stocks"
+  pause="100"
+  selected-object="selectedStock"
+  local-data="marketArray"
+  search-fields="Symbol,Name"
+  description-field="Name"
+  title-field="Symbol"
+  minlength="1"
+  match-class="highlight"&gt;&lt;/div&gt;/>
+</div>
+
+
+<div ng-if="selectedStock" class="selected-stock-display">
+  Click to see the <span class="highlight">{{selectedStock.title}}</span> option chain!
+  <button ng-click="showChain(selectedStock.title)" class="btn btn-primary">Show me the chain!</button>
+</div>
