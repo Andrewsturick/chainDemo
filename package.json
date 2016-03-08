@@ -4,8 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "post-install" : "npm i && bower i && gulp build",
     "start": "node server.js"
+
   },
   "keywords": [],
   "author": "",
