@@ -79,7 +79,7 @@ angular.module('optionChainDemo')
           $('body').on('click', '.dropdown',showUL)
 
           function showUL(e){
-          console.log( $(e.target).closest('th').find('.dropdown-menu').toggle())
+             $(e.target).closest('th').find('.dropdown-menu').toggle()
           }
 
           scope.displayThisExpiration = function(exp){
@@ -103,25 +103,16 @@ angular.module('optionChainDemo')
 
           scope.headers = {
             greeks: ["Delta", "Theta", "Vega", "Gamma"],
-            price: ["High", "Low", "Last Close", "Last Open" ],
-            volatility: ["IV", "IV Rank"],
+            price: ["High", "Low" ],
+            volatility: ["IV"],
             expiration: "Expiration"
           }
 
-          scope.optionsToShowInChain = [
-              "Delta",
-              "Theta",
-              "Gamma",
-              "Vega",
-              "IV",
-              "Probability ITM",
-              "Percent Change"
-          ]
+
 
           scope.Objectify = function(title){
             return title.toLowerCase().replace(' ',"_")
-          }
-
+           }
           }
         }
       })
